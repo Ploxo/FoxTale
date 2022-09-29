@@ -2647,14 +2647,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89fcd865f292de4293e4e0b7180aa42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueDatabase: {fileID: 11400000, guid: f4cf8b3bae3b2034f9e1aad0e5494f0d, type: 2}
+  sceneBackground: {fileID: 2107182090}
+  sceneTextArea: {fileID: 265375686}
+  optionsPanel: {fileID: 2025016839}
+  advanceButton: {fileID: 50700756}
+  optionAButton: {fileID: 1033298036}
+  optionBButton: {fileID: 1142639055}
   startIndex: 0
-  currentState:
-    stateId: 0
-    data:
-      background: {fileID: 0}
-      dialogueSequence: []
-      options: 
+  uiController: {fileID: 1176832050}
+  states:
+  - {fileID: 8844549322882001314, guid: 68be533247222cf4a8e7c243e56f09a2, type: 3}
+  - {fileID: 2940374969529677685, guid: 508ed2f96dc4f0f4f9518e6bfd1f458e, type: 3}
+  currentState: {fileID: 0}
 --- !u!4 &1707741006
 Transform:
   m_ObjectHideFlags: 0

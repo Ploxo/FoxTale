@@ -30,14 +30,26 @@ public class UIController : MonoBehaviour
         //GameController.OnStateChanged -= UpdateUI;
     }
 
-    public void UpdateUI(DialogueData data)
+    public void UpdateUI(State currentState)
     {
-        sceneBackground.sprite = data.background;
-        sceneTextArea.text = data.dialogueSequence[0];
+        sceneBackground.sprite = currentState.graphics;
+        sceneTextArea.text = currentState.text;
 
-        bool showOptions = data.options.Length > 1;
-        optionAButton.gameObject.SetActive(showOptions);
-        optionBButton.gameObject.SetActive(showOptions);
-        advanceButton.gameObject.SetActive(!showOptions);
+        if (currentState.options.Length > 1)
+        {
+            optionAButton.gameObject.SetActive(true);
+            optionBButton.gameObject.SetActive(true);
+            advanceButton.gameObject.SetActive(false);
+
+            optionAButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = currentState.options[0].text;
+            optionBButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = currentState.options[1].text;
+        }
+        else
+        {
+            optionAButton.gameObject.SetActive(false);
+            optionBButton.gameObject.SetActive(false);
+            advanceButton.gameObject.SetActive(true);
+            advanceButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = currentState.options[0].text;
+        }
     }
 }

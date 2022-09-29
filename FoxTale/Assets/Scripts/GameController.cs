@@ -64,15 +64,14 @@ public class GameController : MonoBehaviour
         UpdateUI();
     }
 
+    public void RunExercise(string type, int reps)
+    {
+
+    }
+
     private void UpdateUI() 
     {
-        sceneBackground.sprite = currentState.graphics;
-        sceneTextArea.text = currentState.text;
-
-        bool showOptions = currentState.options.Length > 1;
-        optionAButton.gameObject.SetActive(showOptions);
-        optionBButton.gameObject.SetActive(showOptions);
-        advanceButton.gameObject.SetActive(!showOptions);
+        uiController.UpdateUI(currentState);
     }
 
     /// <summary>

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateId: 8
   graphics: {fileID: 21300000, guid: b08217f522cd53640b09dadd1f0578d1, type: 3}
-  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 0}
+  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 1}
   text: "You walk until you enter a forest clearing and you now know that you are
     more than halfway to the lake. The sun shines through the trees and you notice
     how quiet it is here compared to the stream of water you just passed. You look

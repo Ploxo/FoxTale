@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,6 +5,8 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     // UI elements
+    [SerializeField]
+    private Image uiBackground;
     [SerializeField]
     private Image sceneBackground;
     [SerializeField]
@@ -20,18 +20,20 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private Button optionBButton;
 
+
     private void OnEnable()
     {
-        //GameController.OnStateChanged += UpdateUI;
+        GameController.OnStateChanged += UpdateUI;
     }
 
     private void OnDisable()
     {
-        //GameController.OnStateChanged -= UpdateUI;
+        GameController.OnStateChanged -= UpdateUI;
     }
 
     public void UpdateUI(State currentState)
     {
+        uiBackground.color = currentState.backgroundColor;
         sceneBackground.sprite = currentState.graphics;
         sceneTextArea.text = currentState.text;
 

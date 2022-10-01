@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateId: 4
   graphics: {fileID: 21300000, guid: a20032cd1005c19489ec8b157441ee94, type: 3}
-  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 0}
+  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 1}
   text: "You lift the tree branch and help the squirrel before you continue walking. 
     The squirrel moves along with you and thanks you for helping him. He also says
     his name is \u201CNibbles'' and asks where you are going. You tell the squirrel

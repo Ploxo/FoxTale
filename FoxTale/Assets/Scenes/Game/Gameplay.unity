@@ -618,9 +618,9 @@ MonoBehaviour:
   m_fontSize: 96
   m_fontSizeBase: 96
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 48
+  m_fontSizeMax: 96
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -956,8 +956,8 @@ Canvas:
   m_GameObject: {fileID: 786270577}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
@@ -1080,9 +1080,9 @@ MonoBehaviour:
   m_fontSize: 96
   m_fontSizeBase: 96
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 48
+  m_fontSizeMax: 96
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2049,6 +2049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f6b815dc73a9741a48748f3cd31a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiBackground: {fileID: 970776232}
   sceneBackground: {fileID: 2107182090}
   sceneTextArea: {fileID: 265375686}
   optionsPanel: {fileID: 2025016839}

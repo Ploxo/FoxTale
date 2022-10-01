@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateId: 12
   graphics: {fileID: 21300000, guid: f82210e94546b6c41a722a4f2d34cc39, type: 3}
-  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 0}
+  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 1}
   text: "You decide to move away from the cabin to investigate the noise. Nibbles
     seem dissatisfied with your decision. \u201CWhat if it\u2019s something scary?
     We should be careful\u201D he says nervously.\r\n\u201CIt\u2019s okay, don\u2019t

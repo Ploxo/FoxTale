@@ -9,34 +9,18 @@ using UnityEngine.UI;
 /// </summary>
 public class GameController : MonoBehaviour
 {
-    // UI elements
-    [SerializeField]
-    private Image sceneBackground;
-    [SerializeField]
-    private TextMeshProUGUI sceneTextArea;
-    [SerializeField]
-    private GameObject optionsPanel;
-    [SerializeField]
-    private Button advanceButton;
-    [SerializeField]
-    private Button optionAButton;
-    [SerializeField]
-    private Button optionBButton;
-
-    [SerializeField]
-    private int startIndex = 0;
-    [SerializeField]
-    private UIController uiController;
-
-    [SerializeField]
-    State[] states;
-
     [HideInInspector]
     public State currentState;
 
+    [SerializeField]
+    private UIController uiController;
+    [SerializeField]
+    private int startIndex = 0;
+    [SerializeField]
+    State[] states;
 
-    //public delegate void StateAction(DialogueData data);
-    //public static event StateAction OnStateChanged;
+    public delegate void StateAction(State newState);
+    public static event StateAction OnStateChanged;
 
 
     private void Start()
@@ -45,8 +29,7 @@ public class GameController : MonoBehaviour
         Debug.Log("Current state is: " + currentState.stateId);
 
         // Handle state change
-        //OnStateChanged(currentState.data);
-        UpdateUI();
+        OnStateChanged(currentState);
     }
 
     /// <summary>
@@ -60,18 +43,12 @@ public class GameController : MonoBehaviour
         Debug.Log("Current state is: " + currentState.stateId);
 
         // Handle state change
-        //OnStateChanged(currentState.data);
-        UpdateUI();
+        OnStateChanged(currentState);
     }
 
     public void RunExercise(string type, int reps)
     {
 
-    }
-
-    private void UpdateUI() 
-    {
-        uiController.UpdateUI(currentState);
     }
 
     /// <summary>

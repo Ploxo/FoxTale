@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateId: 0
   graphics: {fileID: 21300000, guid: 516474052d8fad64eba89406c177541b, type: 3}
-  backgroundColor: {r: 0.7372549, g: 0.42352942, b: 0.14509805, a: 0}
+  backgroundColor: {r: 0.7372549, g: 0.42352942, b: 0.14509805, a: 1}
   text: 'You are a fox that tries to find a newer better place to live after yours
     have been destroyed after an environmental disaster. You have heard from the
     wise owl in your forest that there exists a place over land and oceans that is

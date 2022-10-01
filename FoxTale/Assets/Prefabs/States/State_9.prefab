@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateId: 9
   graphics: {fileID: 21300000, guid: 4ae380dace2bc45418fbcf0f87df25a0, type: 3}
-  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 0}
+  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 1}
   text: "Success! You got the basket! You feast on the delicious blueberries before
     continuing into the forest.  \r\n\r\n\u201CHEY\u201D, you hear someone yelling
     behind you. You turn around but you don\u2019t see anyone. \u201CUp here, you

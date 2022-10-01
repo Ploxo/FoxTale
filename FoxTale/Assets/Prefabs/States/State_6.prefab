@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateId: 6
   graphics: {fileID: 21300000, guid: 9dc0cb6cf0c78064eadbb49bc1777764, type: 3}
-  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 0}
+  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 1}
   text: "Success! You got the basket! \u201CGreat job!\u201D Nibbles exclaim, cheering
     you on. You feast on the delicious blueberries before continuing into the forest,
     leaving the clearing behind you."

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateId: 11
   graphics: {fileID: 21300000, guid: bd4381455f33d5d45866f45d02497608, type: 3}
-  backgroundColor: {r: 0.8666667, g: 0.6313726, b: 0.36862746, a: 0}
+  backgroundColor: {r: 0.8666667, g: 0.6313726, b: 0.36862746, a: 1}
   text: "You make it to the door opening of the abandoned cabin with Nibbles right
     behind you. You can see that the dust lays heavy on the furniture and the cabin
     has an earthy smell to it.  You move one paw at a time slowly making it further

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateId: 10
   graphics: {fileID: 21300000, guid: 16a155c1029894047bf9ea1ed3f317a7, type: 3}
-  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 0}
+  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 1}
   text: "You and Nibbles walk quietly next to each other deeper into the forest.
     The branches are dense, almost not letting in any sunlight, making the forest
     look a bit spooky. The sound of birds chirping is getting further away as you

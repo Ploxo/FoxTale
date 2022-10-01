@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateId: 3
   graphics: {fileID: 21300000, guid: e58ca32db67a55c4c80f16bfbe66274c, type: 3}
-  backgroundColor: {r: 0.7372549, g: 0.42352942, b: 0.14509805, a: 0}
+  backgroundColor: {r: 0.7372549, g: 0.42352942, b: 0.14509805, a: 1}
   text: "\u201CAren\u2019t you a clever one\u201D, you hear spoken from the brush
     to your left. You turn to face a squirrel, scrutinizing you.\r\n\u201CI was sitting
     in that tree you just pushed,\u201D said the squirrel. \r\nYou notice that it

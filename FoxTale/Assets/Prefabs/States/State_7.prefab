@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateId: 7
   graphics: {fileID: 21300000, guid: 991170f119c2c444989319197426e985, type: 3}
-  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 0}
+  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 1}
   text: "You look at the squirrel and say \u201CI\u2019m in a hurry to find the new
     world where the grass is green and everything flourishes, and don\u2019t have
     time to help you.\u201D You continue to walk forward.  \r\n\u201CHow rude! You

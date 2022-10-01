@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1365196573713434549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3225432799011176161}
+  - component: {fileID: 459908147218674552}
+  m_Layer: 0
+  m_Name: State_10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3225432799011176161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365196573713434549}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 439.95438, y: 1245.3826, z: -6.191656}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &459908147218674552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365196573713434549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf4099aac660f34a9187fbc0019eb63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateId: 10
+  graphics: {fileID: 21300000, guid: 16a155c1029894047bf9ea1ed3f317a7, type: 3}
+  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 0}
+  text: "You and Nibbles walk quietly next to each other deeper into the forest.
+    The branches are dense, almost not letting in any sunlight, making the forest
+    look a bit spooky. The sound of birds chirping is getting further away as you
+    continue walking. It is getting quieter with each step you take. \r\n\r\nSuddenly
+    you and Nibbles heard a loud sound. Both of you stop walking. You notice that
+    Nibbles looked a bit shaken up. \u201CDid you hear that?\u201D ask Nibbles. \u201CYes!\u201D
+    you answered, not sure how to react. You quickly start to look around. You spot
+    not too long in front of you to the left there is what looks like an abandoned
+    cabin. Once again you hear the mysterious noise. This time you hear that it is
+    coming from the opposite direction of the cabin. What do you do?\r\n"
+  options:
+  - nextState: 11
+    text: Go to the cabin
+    exercise: {fileID: 0}
+  - nextState: 12
+    text: Go towards the sound
+    exercise: {fileID: 0}

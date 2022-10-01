@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7939263086820482415
+--- !u!1 &4064051973747630547
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5772700688748323899}
-  - component: {fileID: 8844549322882001314}
+  - component: {fileID: 456909456022870151}
+  - component: {fileID: 3239674409185711390}
   m_Layer: 0
-  m_Name: Start
+  m_Name: State_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5772700688748323899
+--- !u!4 &456909456022870151
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7939263086820482415}
+  m_GameObject: {fileID: 4064051973747630547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 439.95438, y: 1245.3826, z: -6.191656}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,27 +32,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8844549322882001314
+--- !u!114 &3239674409185711390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7939263086820482415}
+  m_GameObject: {fileID: 4064051973747630547}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcf4099aac660f34a9187fbc0019eb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateId: 0
-  graphics: {fileID: 21300000, guid: 516474052d8fad64eba89406c177541b, type: 3}
+  stateId: 2
+  graphics: {fileID: 21300000, guid: a86b995f034b79c47bed478d34219d8f, type: 3}
   backgroundColor: {r: 0.7372549, g: 0.42352942, b: 0.14509805, a: 0}
-  text: 'You are a fox that tries to find a newer better place to live after yours
-    have been destroyed after an environmental disaster. You have heard from the
-    wise owl in your forest that there exists a place over land and oceans that is
-    as green as it could be and flourish with life, and you go out in the wild to
-    find it. '
+  text: You are arriving at a stream of water that you can jump or swim over. You
+    need to find a way to cross it. You see a broken tree that you decide to push
+    to create a bridge over the water. To succeed in getting over without falling
+    in you need to run as fast as you can in 5 sec (add distance).
   options:
-  - nextState: 1
-    text: Move forward
-    exercise: {fileID: 0}
+  - nextState: 3
+    text: Start task
+    exercise: {fileID: 6598043867695528868, guid: 98ad3b2c75acabb498dc75d51644681e, type: 3}

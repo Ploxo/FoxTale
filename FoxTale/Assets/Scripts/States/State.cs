@@ -8,6 +8,8 @@ public class State : MonoBehaviour
 
     public Sprite graphics;
 
+    public Color backgroundColor;
+
     [TextArea]
     public string text;
 

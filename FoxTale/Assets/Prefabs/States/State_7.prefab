@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4349778490565313464
+--- !u!1 &1008958599461777660
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 174700835248716524}
-  - component: {fileID: 2940374969529677685}
+  - component: {fileID: 3472740983774366120}
+  - component: {fileID: 1914946323924993073}
   m_Layer: 0
-  m_Name: Stage_1
+  m_Name: State_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &174700835248716524
+--- !u!4 &3472740983774366120
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4349778490565313464}
+  m_GameObject: {fileID: 1008958599461777660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 439.95438, y: 1245.3826, z: -6.191656}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,25 +32,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2940374969529677685
+--- !u!114 &1914946323924993073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4349778490565313464}
+  m_GameObject: {fileID: 1008958599461777660}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcf4099aac660f34a9187fbc0019eb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateId: 1
-  graphics: {fileID: 21300000, guid: 6b74e30e73fed9747b13cb3cb2830aa8, type: 3}
-  text: "Today you start your journey to find the world the owl talked about. Your
-    first hurdle will be to move to the outer side of the forest that you are very
-    familiar with but do to the disaster could be difficult to move around in and
-    may be dangerous. You know that there is a lake present at the end of the forest
-    and you will have to move there first. \n\n*walk in the forest*\n"
+  stateId: 7
+  graphics: {fileID: 21300000, guid: 991170f119c2c444989319197426e985, type: 3}
+  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 0}
+  text: "You look at the squirrel and say \u201CI\u2019m in a hurry to find the new
+    world where the grass is green and everything flourishes, and don\u2019t have
+    time to help you.\u201D You continue to walk forward.  \r\n\u201CHow rude! You
+    will regret this you stupid fox!\u201D the squirrel yells at you from behind.
+    But you have no time to stop and think about the squirrel, you have a long journey
+    in front of you!\r\n\r\nYou continue walking further into the forest on the other
+    side of the stream and walk about 500m before\u2026\r\n"
   options:
-  - nextState: 2
+  - nextState: 8
     text: Move forward
+    exercise: {fileID: 0}

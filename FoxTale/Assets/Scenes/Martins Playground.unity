@@ -461,7 +461,9 @@ MonoBehaviour:
   - Trying this sentence!
   - Awesome it writes the second sentence too
   - Holy Moly we going for a third sentence!
-  timeBetweenCharacters: 0.07
+  - 1Holy Moly we going for a third sentence!
+  - 2Holy Moly we going for a third sentence!
+  timeBetweenCharacters: 0.1
   timeForNextWords: 1
 --- !u!1 &1704268465
 GameObject:

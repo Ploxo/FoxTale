@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     private UIController uiController;
     [SerializeField]
     private int startIndex = 0;
+ 
     [SerializeField]
     State[] states;
 
@@ -38,17 +39,11 @@ public class GameController : MonoBehaviour
     /// <param name="option">The option chosen by the user.</param>
     public void AdvanceWithOption(int option)
     {
-        Debug.Log($"Advanced to new state: {states[currentState.stateId]}");
         currentState = states[currentState.options[option].nextState];
         Debug.Log("Current state is: " + currentState.stateId);
 
         // Handle state change
         OnStateChanged(currentState);
-    }
-
-    public void RunExercise(string type, int reps)
-    {
-
     }
 
     /// <summary>

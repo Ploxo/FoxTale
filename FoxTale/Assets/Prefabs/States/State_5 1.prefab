@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &820549202444341114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3842133572414453294}
+  - component: {fileID: 7339611573341768499}
+  m_Layer: 0
+  m_Name: State_5 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3842133572414453294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820549202444341114}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 439.95438, y: 1245.3826, z: -6.191656}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7339611573341768499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820549202444341114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ebe0f74813d0d41b01721cacd2acf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateId: 5
+  graphics: {fileID: 21300000, guid: 8f3b1cb4d54cf9a45851e0279ad6e428, type: 3}
+  backgroundColor: {r: 0.37647063, g: 0.42352945, b: 0.21960786, a: 1}
+  sentences:
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: "You walk until you enter a forest clearing and you now know that you are
+      more than halfway to the lake. The sun shines through the trees and you notice
+      how quiet it is here compared to the stream of water you just passed. You look
+      around the trees and catch the glimpse of something up on a short tree branch.
+      It looks like one of those baskets that humans use to steal berries in and
+      you smell the wonderful scent of blueberries. Your stomach makes a loud growling
+      sound, you realize that it has been a long time since you had something to
+      eat.  \r\nThose blueberries would be a really tasty snack. What do you do?\r"
+  options:
+  - nextState: 6
+    text: Jump 5 times to grab the basket
+    exercise: {fileID: 6598043867695528868, guid: 98ad3b2c75acabb498dc75d51644681e, type: 3}
+  - nextState: 6
+    text: Run 50m to charge at the tree to make it fall down
+    exercise: {fileID: 0}

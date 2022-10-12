@@ -17,6 +17,8 @@ public class TextWriter : MonoBehaviour
     float timeForNextWords;
 
     int sentence = 0;
+    
+    bool Test = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,16 +35,35 @@ public class TextWriter : MonoBehaviour
         }
     }
 
-    private IEnumerator TextVisible()
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Test = true;
+            Debug.Log("Works");
+        }
+    }
+    public IEnumerator TextVisible()
     {
         textMeshProText.ForceMeshUpdate();  //Will force a regeneration of text for the text object? (This is neccessary according to the tutorial).
         int totalVisibleCharacters = textMeshProText.textInfo.characterCount;   //Characters displaying will be the written message.
         int counter = 0;    //Helps tracking the time.
 
+        Test = false;
+
         while (true)
         {
             int visibleCount = counter % (totalVisibleCharacters + 1);  //visibleCount gets incremented as time goes.
             textMeshProText.maxVisibleCharacters = visibleCount;
+
+            if (Test == true)
+            {
+                Test = false;
+                textMeshProText.maxVisibleCharacters = textMeshProText.textInfo.characterCount;
+                Invoke("SentenceEndCheck", timeForNextWords);
+                sentence++;
+                break;
+            }
 
             //Checks if the sentence is completed, if it is, feed the next sentence to the text writer.
             if (visibleCount >= totalVisibleCharacters)
@@ -51,10 +72,10 @@ public class TextWriter : MonoBehaviour
                 Invoke("SentenceEndCheck", timeForNextWords);
                 break;
             }
-
             counter++;
             yield return new WaitForSeconds(timeBetweenCharacters);
         }
+
     }
 
 }

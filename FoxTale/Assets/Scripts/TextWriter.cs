@@ -20,7 +20,7 @@ public class TextWriter : MonoBehaviour
 
     [SerializeField]
     float timeBetweenCharacters;
-    
+
     [SerializeField]
     float timeForNextWords;
 
@@ -68,18 +68,24 @@ public class TextWriter : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Write text sentences one at a time, replacing the previous one.
-    /// </summary>
-    /// <returns></returns>
-    private IEnumerator TextVisible(TextMeshProUGUI textObject)
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Test = true;
+            Debug.Log("Works");
+        }
+    }
+    public IEnumerator TextVisible()
     {
         textObject.text = textArrays[sentence].text;
         textObject.ForceMeshUpdate();  //Will force a regeneration of text for the text object? (This is neccessary according to the tutorial).
-        
+
         int totalVisibleCharacters = textObject.textInfo.characterCount;   //Characters displaying will be the written message.
         int counter = 0;    //Helps tracking the time.
-        
+
+        Test = false;
+
         while (true)
         {
             int visibleCount = counter % (totalVisibleCharacters + 1);  //visibleCount gets incremented as time goes.
@@ -117,6 +123,15 @@ public class TextWriter : MonoBehaviour
             int visibleCount = counter % (totalVisibleCharacters + 1);
             textObject.maxVisibleCharacters = visibleCount;
 
+            if (Test == true)
+            {
+                Test = false;
+                textMeshProText.maxVisibleCharacters = textMeshProText.textInfo.characterCount;
+                Invoke("SentenceEndCheck", timeForNextWords);
+                sentence++;
+                break;
+            }
+
             //Checks if the sentence is completed, if it is, feed the next sentence to the text writer.
             if (visibleCount >= totalVisibleCharacters)
             {
@@ -124,10 +139,10 @@ public class TextWriter : MonoBehaviour
                 Invoke("SentenceEndCheck", timeForNextWords);
                 break;
             }
-
             counter++;
             yield return new WaitForSeconds(timeBetweenCharacters);
         }
+
     }
 
 }

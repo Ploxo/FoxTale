@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateId: 1
   graphics: {fileID: 21300000, guid: 6b74e30e73fed9747b13cb3cb2830aa8, type: 3}
-  backgroundColor: {r: 0.15686275, g: 0.21176471, b: 0.09411765, a: 1}
+  backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 1}
   text: "Today you start your journey to find the world the owl talked about. Your
     first hurdle will be to move to the outer side of the forest that you are very
     familiar with but do to the disaster could be difficult to move around in and

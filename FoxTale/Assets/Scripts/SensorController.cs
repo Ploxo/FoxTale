@@ -59,6 +59,10 @@ public class SensorController : MonoBehaviour
         if (accelerometer != null)
         {
             accelerometerText.text = "Accelerometer: " + accelerometer.acceleration.ReadValue();
+
+            Vector3 position = new Vector3(-1, 0, 0);
+            //Debug.DrawLine(position, position + accelerometer.acceleration.ReadValue());
+            Debug.DrawLine(position, position + Vector3.up, Color.red);
         }
         if (stepCounter != null)
         {
@@ -68,8 +72,8 @@ public class SensorController : MonoBehaviour
 
     public int CurrentStepsTaken()
     {
-        if (stepCounter == null)
-            return stepsTaken;
+        //if (stepCounter == null)
+        //    return stepsTaken;
 
         return stepCounter.stepCounter.ReadValue();
     }
@@ -84,4 +88,5 @@ public class SensorController : MonoBehaviour
     {
         stepsTaken++;
     }
+
 }

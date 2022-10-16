@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "FA632WM01069",
         "name": "com.DefaultCompany.FoxTale",
-        "processId": 17194,
+        "processId": 15660,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -42,6 +42,18 @@
             "deviceId": "FA632WM01069",
             "name": "com.DefaultCompany.FoxTale",
             "processId": 17194,
+            "exited": false
+        },
+        {
+            "deviceId": "FA632WM01069",
+            "name": "com.DefaultCompany.FoxTale",
+            "processId": 10866,
+            "exited": false
+        },
+        {
+            "deviceId": "FA632WM01069",
+            "name": "com.DefaultCompany.FoxTale",
+            "processId": 15660,
             "exited": false
         }
     ],

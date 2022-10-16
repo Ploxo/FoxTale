@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class SensorController : MonoBehaviour
 {
+    public DrawLine drawLine;
+
     public enum SensorType
     {
         ACCELEROMETER,
@@ -59,15 +61,20 @@ public class SensorController : MonoBehaviour
         if (accelerometer != null)
         {
             accelerometerText.text = "Accelerometer: " + accelerometer.acceleration.ReadValue();
-
-            Vector3 position = new Vector3(-1, 0, 0);
-            //Debug.DrawLine(position, position + accelerometer.acceleration.ReadValue());
-            Debug.DrawLine(position, position + Vector3.up, Color.red);
         }
         if (stepCounter != null)
         {
             counterText.text = "StepCounter: " + stepCounter.stepCounter.ReadValue();
         }
+
+        Vector3 position = new Vector3(-1, 0, 0);
+        drawLine.positionOne = position;
+        drawLine.positionTwo = position + accelerometer.acceleration.ReadValue();
+        //drawLine.positionTwo = position + Vector3.up;
+        drawLine.color = Color.red;
+
+        //Debug.DrawLine(position, position + accelerometer.acceleration.ReadValue());
+        //Debug.DrawLine(position, position + Vector3.up, Color.red);
     }
 
     public int CurrentStepsTaken()

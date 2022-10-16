@@ -6,6 +6,12 @@ using UnityEngine.InputSystem;
 
 public class SensorController : MonoBehaviour
 {
+    public enum SensorType
+    {
+        ACCELEROMETER,
+        STEPCOUNTER
+    }
+
     public static SensorController Instance;
 
     private Accelerometer accelerometer;
@@ -62,11 +68,20 @@ public class SensorController : MonoBehaviour
 
     public int CurrentStepsTaken()
     {
+        if (stepCounter == null)
+            return stepsTaken;
+
         return stepCounter.stepCounter.ReadValue();
     }
 
     public Vector3 CurrentAcceleration()
     {
         return accelerometer.acceleration.ReadValue();
+    }
+
+    public int stepsTaken = 0;
+    public void CountUp()
+    {
+        stepsTaken++;
     }
 }

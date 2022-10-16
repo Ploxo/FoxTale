@@ -28,6 +28,7 @@ public class TextWriter : MonoBehaviour
 
     int sentence = 0;
     TextMode currentTextMode;
+    bool Test;
 
 
     public void StartWriter()
@@ -39,6 +40,7 @@ public class TextWriter : MonoBehaviour
     {
         currentTextMode = mode;
         layoutController.ClearItems();
+        Test = false;
 
         if (coroutine != null)
             StopCoroutine(coroutine);
@@ -76,7 +78,8 @@ public class TextWriter : MonoBehaviour
             Debug.Log("Works");
         }
     }
-    public IEnumerator TextVisible()
+
+    public IEnumerator TextVisible(TextMeshProUGUI textObject)
     {
         textObject.text = textArrays[sentence].text;
         textObject.ForceMeshUpdate();  //Will force a regeneration of text for the text object? (This is neccessary according to the tutorial).
@@ -90,6 +93,12 @@ public class TextWriter : MonoBehaviour
         {
             int visibleCount = counter % (totalVisibleCharacters + 1);  //visibleCount gets incremented as time goes.
             textObject.maxVisibleCharacters = visibleCount;
+
+            if (Test == true)
+            {
+                Test = false;
+                visibleCount = textObject.textInfo.characterCount;
+            }
 
             //Checks if the sentence is completed, if it is, feed the next sentence to the text writer.
             if (visibleCount >= totalVisibleCharacters)
@@ -126,10 +135,7 @@ public class TextWriter : MonoBehaviour
             if (Test == true)
             {
                 Test = false;
-                textMeshProText.maxVisibleCharacters = textMeshProText.textInfo.characterCount;
-                Invoke("SentenceEndCheck", timeForNextWords);
-                sentence++;
-                break;
+                visibleCount = textObject.textInfo.characterCount;
             }
 
             //Checks if the sentence is completed, if it is, feed the next sentence to the text writer.
@@ -139,6 +145,7 @@ public class TextWriter : MonoBehaviour
                 Invoke("SentenceEndCheck", timeForNextWords);
                 break;
             }
+
             counter++;
             yield return new WaitForSeconds(timeBetweenCharacters);
         }

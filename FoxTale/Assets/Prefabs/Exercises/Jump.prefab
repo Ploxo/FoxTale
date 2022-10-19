@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exerciseType: Jump
   repetitions: 5
+  sensorType: 1

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -15,12 +16,19 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private UIController uiController;
     [SerializeField]
+    private ExerciseController exerciseController;
+    [SerializeField]
     private int startIndex = 0;
+ 
     [SerializeField]
     State[] states;
 
     public delegate void StateAction(State newState);
-    public static event StateAction OnStateChanged;
+    public event StateAction OnStateChanged;
+
+    public delegate void ExerciseAction(ExerciseInfo exercise);
+    public event ExerciseAction OnExerciseStart;
+    public event ExerciseAction OnExerciseEnd;
 
 
     private void Start()
@@ -38,18 +46,43 @@ public class GameController : MonoBehaviour
     /// <param name="option">The option chosen by the user.</param>
     public void AdvanceWithOption(int option)
     {
-        Debug.Log($"Advanced to new state: {states[currentState.stateId]}");
-        currentState = states[currentState.options[option].nextState];
-        Debug.Log("Current state is: " + currentState.stateId);
+        if (currentState.options[option].exercise)
+        {
+            StartCoroutine(WaitForCompletion(currentState.options[option].exercise, option));
 
-        // Handle state change
+            //StartCoroutine(WaitForExercise(option));
+        }
+        else
+        {
+            Debug.Log("Chose option " + option);
+            currentState = states[currentState.options[option].nextState];
+            Debug.Log("Current state is: " + currentState.stateId);
+
+            OnStateChanged(currentState);
+        }
+    }
+
+    private IEnumerator WaitForCompletion(ExerciseInfo exercise, int option)
+    {
+        OnExerciseStart(exercise);
+
+        bool success = false;
+        yield return exerciseController.StartExercise(exercise, result => success = result);
+
+        if (success)
+            currentState = states[currentState.options[option].nextState];
+
+        OnExerciseEnd(exercise);
         OnStateChanged(currentState);
     }
 
-    public void RunExercise(string type, int reps)
-    {
+    //private void OnExerciseCallback(bool success)
+    //{
+    //    if (success)
+    //        currentState = states[currentState.options[option].nextState];
 
-    }
+    //    OnStateChanged(currentState);
+    //}
 
     /// <summary>
     /// Progress to the next state with no options.

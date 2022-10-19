@@ -8,7 +8,8 @@ public class DrawLine : MonoBehaviour
     LineDrawer lineDrawer;
     public Vector3 positionOne;
     public Vector3 positionTwo;
-    public Color color;
+    public Color color1;
+    public Color color2;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class DrawLine : MonoBehaviour
 
     void Update()
     {
-        lineDrawer.DrawLineInGameView(positionOne, positionTwo, color);
+        lineDrawer.DrawLineInGameView(positionOne, positionTwo, color1, color2);
     }
 
     //public void Draw(Color color)
@@ -56,7 +57,7 @@ public struct LineDrawer
     }
 
     //Draws lines through the provided vertices
-    public void DrawLineInGameView(Vector3 start, Vector3 end, Color color)
+    public void DrawLineInGameView(Vector3 start, Vector3 end, Color color1, Color color2)
     {
         if (lineRenderer == null)
         {
@@ -64,8 +65,8 @@ public struct LineDrawer
         }
 
         //Set color
-        lineRenderer.startColor = color;
-        lineRenderer.endColor = color;
+        lineRenderer.startColor = color1;
+        lineRenderer.endColor = color2;
 
         //Set width
         lineRenderer.startWidth = lineSize;

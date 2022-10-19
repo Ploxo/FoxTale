@@ -98,6 +98,8 @@ public class ExerciseController : MonoBehaviour
                 case SensorController.SensorType.STEPCOUNTER: 
                     count = SensorController.Instance.CurrentStepsTaken() - initialCount;
                     break;
+                case SensorController.SensorType.ACCELEROMETER:
+
                 default:
                     break;
             }

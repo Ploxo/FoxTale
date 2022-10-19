@@ -40,7 +40,6 @@ public class TextWriter : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Test = true;
-            Debug.Log("Works");
         }
     }
     public IEnumerator TextVisible()

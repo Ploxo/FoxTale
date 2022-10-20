@@ -52,15 +52,18 @@ MonoBehaviour:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: You are a fox that tries to find a newer better place to live after yours
-      have been destroyed after an environmental disaster.
+    text: You are a fox whose home was destroyed in an environmental disaster.
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: 'You have heard from the wise owl in your forest that there exists a place
-      over land and oceans that is as green as it could be and flourish with life,
-      and you go out in the wild to find it. '
+    text: The wise owl of the forest told you that far away, across lakes and hills,
+      there exists a part of nature flourishing with life, a paradise.
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: You have to find it. The journey begins!
   options:
   - nextState: 1
     text: Move forward

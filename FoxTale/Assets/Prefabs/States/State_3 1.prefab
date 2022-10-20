@@ -52,19 +52,19 @@ MonoBehaviour:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "\u201CAren\u2019t you a clever one\u201D, you hear spoken from the brush
-      to your left. You turn to face a squirrel, scrutinizing you.\r"
+    text: "\u201CAren\u2019t you a clever one\u201D, you hear spoken from the leaves
+      next to you. You turn to face a squirrel, scrutinizing you.\r"
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "\u201CI was sitting in that tree you just pushed,\u201D said the squirrel."
+    text: "\u201CI was sitting in the tree that you just pushed,\u201D says the squirrel."
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "You notice that it seems your tree-pushing has had some unintended consequences,
-      trapping the squirrel underneath it on this side.\r"
+    text: It seems your tree-pushing had some unintended consequences, leaving the
+      squirrel trapped underneath it.
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 

@@ -52,16 +52,20 @@ MonoBehaviour:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: You are arriving at a stream of water that you can jump or swim over. You
-      need to find a way to cross it.
+    text: You arrive at a violent stream of water. You need to find a way to cross
+      it.
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: ' You see a broken tree that you decide to push to create a bridge over
-      the water. To succeed in getting over without falling in you need to run as
-      fast as you can in 5 sec (add distance).'
+    text: You spot a broken tree nearby that you push in order to create a bridge
+      over the water.
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: 'To have to walk over the tree trunk to continue: Walk 10 steps.'
   options:
   - nextState: 3
     text: Start task
-    exercise: {fileID: 6598043867695528868, guid: 98ad3b2c75acabb498dc75d51644681e, type: 3}
+    exercise: {fileID: 4254150079229159608, guid: b8479b08e0ce1354f94081d8bbea55b2, type: 3}

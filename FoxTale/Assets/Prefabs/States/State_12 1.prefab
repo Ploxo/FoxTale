@@ -52,7 +52,7 @@ MonoBehaviour:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "You decide to move away from the cabin to investigate the noise. Nibbles
+    text: "You decide to move away from the cabin and investigate the noise. Nibbles
       seem dissatisfied with your decision. \u201CWhat if it\u2019s something scary?
       We should be careful\u201D he says nervously.\r"
   - speaker:
@@ -60,10 +60,14 @@ MonoBehaviour:
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
     text: "\u201CIt\u2019s okay, don\u2019t worry\u201D, you respond.\r\nThe two
-      of you carefully sneak towards the sound. You hear yourself getting closer
-      to the source of the noise, it is starting to get more clear and you notice
-      it is a pounding sound. You move around a large tree trunk and suddenly see
-      something that makes you go backward into Nibbles. "
+      of you carefully sneak towards the sound. As you get closer, you notice it
+      is sort of pounding sound."
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: 'You move around a large tree trunk and suddenly see something that makes
+      you back off, bumping into Nibbles. '
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 

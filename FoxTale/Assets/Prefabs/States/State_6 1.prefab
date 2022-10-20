@@ -62,8 +62,8 @@ MonoBehaviour:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: ' You feast on the delicious blueberries before continuing into the forest,
-      leaving the clearing behind you.'
+    text: You feast on the delicious blueberries before continuing into the forest,
+      leaving the clearing behind you.
   options:
   - nextState: 10
     text: Move forward

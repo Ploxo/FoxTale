@@ -58,9 +58,9 @@ MonoBehaviour:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "\u201CHEY\u201D, you hear someone yelling behind you. You turn around
-      but you don\u2019t see anyone. \u201CUp here, you dumb fox!\u201D\nYou turn
-      your gaze towards the trees."
+    text: "\u201CHEY! How dare you leave me behind like that!\u201D, you hear someone
+      yelling behind you. It\u2019s the squirrel. He looks really annoyed. Suddenly
+      you feel a bit guilty for leaving him behind."
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 
@@ -72,12 +72,12 @@ MonoBehaviour:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "\u201CI\u2019m sorry for leaving you before. I wasn\u2019t trying to hurt
-      you, I just have a long journey ahead of me,\u201D you say with remorse in
-      your voice. \r\n\u201CYou are lucky I am so forgiving. Let me come with you
-      to this green place you talked about and I will let it slide\u201D the squirrel
-      says.\r\n\u201CDeal\u201D, you say.\r\n\u201CThe name is Nibbles by the way\u201D,
-      says the squirrel.\r\n\u201CNice to meet you Nibbles\""
+    text: "\u201CI\u2019m sorry for not helping you earlier. I just have a long journey
+      ahead of me,\u201D you say with remorse in your voice. \r\n\u201CYou are lucky
+      I am so forgiving. Let me come with you to this green place you talked about
+      and I will let it slide\u201D the squirrel says.\r\n\u201CDeal\u201D, you answer.\r\n\u201CThe
+      name is Nibbles by the way\u201D, says the squirrel.\r\n\u201CNice to meet
+      you Nibbles\""
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 

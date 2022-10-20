@@ -52,27 +52,35 @@ MonoBehaviour:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: 'You walk until you enter a forest clearing and you now know that you are
-      more than halfway to the lake. The sun shines through the trees and you notice
-      how quiet it is here compared to the stream of water you just passed. '
+    text: You notice the surrounding getting quieter as you leave the stream behind
+      you, but the silence if soon filled with Nibbles never ending talk about food.
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "You look around the trees and catch the glimpse of something up on a short
-      tree branch. It looks like one of those baskets that humans use to steal berries
-      in. You smell the wonderful scent of blueberries. In response, your stomach
-      makes a loud growling sound, you realize that it has been a long time since
-      you had something to eat.  \r"
+    text: You look around the trees and notice something up on a short tree branch.
+      It looks like one of those baskets humans use to hide berries in.
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "Those blueberries would be a really tasty snack. What do you do?\r"
+    text: You can smell the wonderful scent of blueberries. In response, your stomach
+      makes a loud growling sound. It has been a long time since you had something
+      to eat.
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: 'Those blueberries would be a really tasty snack. You must find a way to
+      get them.
+
+
+      Do you jump to grab them or charge at the tree to knock the
+      basket down?'
   options:
   - nextState: 6
-    text: Jump 5 times to grab the basket
+    text: Jump
     exercise: {fileID: 6598043867695528868, guid: 98ad3b2c75acabb498dc75d51644681e, type: 3}
   - nextState: 6
-    text: Run 50m to charge at the tree to make it fall down
-    exercise: {fileID: 0}
+    text: Charge
+    exercise: {fileID: 4254150079229159608, guid: b8479b08e0ce1354f94081d8bbea55b2, type: 3}

@@ -53,32 +53,31 @@ MonoBehaviour:
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
     text: You and Nibbles walk quietly next to each other deeper into the forest.
-      The branches are dense, almost not letting in any sunlight, making the forest
-      look a bit spooky. The sound of birds chirping is getting further away as you
-      continue walking. It is getting quieter with each step you take.
+      The branches are dense, almost not letting in any sunlight. It is getting quieter
+      with each step you take.
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: Suddenly you and Nibbles heard a loud sound. Both of you stop walking.
-      You notice that Nibbles looked a bit shaken up.
+    text: Suddenly a loud sound echoes. You both stop dead in your tracks. Nibbles
+      lookes a bit shaken up.
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "\u201CDid you hear that?\u201D ask Nibbles. \u201CYes!\u201D you answered,
-      not sure how to react. You quickly start to look around. You spot not too long
-      in front of you to the left there is what looks like an abandoned cabin."
+    text: "\u201CDid you hear that?\u201D ask Nibbles. \u201CYes!\u201D you answer,
+      not sure how to react. You start to look around and spot what looks like an
+      abandoned cabin not too far away."
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "Once again you hear the mysterious noise. This time you hear that it is
-      coming from the opposite direction of the cabin. What do you do?\r"
+    text: "Once again the sound echoes out of nowhere. This time you hear that it
+      is coming from the opposite direction of the cabin. Where do you go?\r"
   options:
   - nextState: 11
-    text: Go to the cabin
-    exercise: {fileID: 0}
+    text: The cabin
+    exercise: {fileID: 4254150079229159608, guid: b8479b08e0ce1354f94081d8bbea55b2, type: 3}
   - nextState: 12
-    text: Go towards the sound
-    exercise: {fileID: 0}
+    text: The sound
+    exercise: {fileID: 4254150079229159608, guid: b8479b08e0ce1354f94081d8bbea55b2, type: 3}

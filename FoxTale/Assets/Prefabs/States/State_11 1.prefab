@@ -54,31 +54,28 @@ MonoBehaviour:
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
     text: "You make it to the door opening of the abandoned cabin with Nibbles right
       behind you. You can see that the dust lays heavy on the furniture and the cabin
-      has an earthy smell to it.  You move one paw at a time slowly making it further
-      into the cabin. \r"
+      has an earthy smell to it.  You slowly make your way further into the cabin.
+      \r"
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
     text: "\u201CHey, are you sure you want to go there?\u201D you heard Nibbles
       say where he stands in the opening.\r\n \u201CI\u2019m too curious not to.
-      Maybe we can find something we could find useful\u201D you answered back. \r"
+      Maybe we can find something we could find useful\u201D you answer back. \r"
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: 'You accidentally place one of your front paws on an unstable floorboard
-      making it crack and you suddenly fall through the floor. You end up landing
-      on the hard dirt underneath the cabin and the dust from the fall makes you
-      cough.  '
+    text: Suddenly, the fragile floor breaks underneath you and you start to fall.
+      You end up landing in a pile of dirt further down.
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "You can hear Nibbles shouting above you \u201CAre you okay my friend?\u201D
-      \r\nHow I\u2019m able to come up here you think to yourself. \r\n\u201CWe need
-      to find a way to get me up from here\u201D you shout back to Nibbles. \r\nTO
-      BE CONTINUED\u2026\r"
+    text: "You can hear Nibbles shouting from above:\n\u201CAre you okay, friend?\u201D
+      \r\nWhat do I do now? you think to yourself.\n\u201CWe need to find a way to
+      get me up from here\u201D you shout back to Nibbles. \nTO BE CONTINUED\u2026\r"
   options:
   - nextState: 11
     text: End

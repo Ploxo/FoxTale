@@ -44,25 +44,25 @@ public class ExerciseController : MonoBehaviour
         cancelButton.gameObject.SetActive(!value);
     }
 
-    int stepCount = 0;
-    int jumps = 0;
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            stepCount = 0;
-            jumps = 0;
-        }
+    //int stepCount = 0;
+    //int jumps = 0;
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.T))
+    //    {
+    //        stepCount = 0;
+    //        jumps = 0;
+    //    }
 
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            stepCount++;
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            jumps++;
-        }
-    }
+    //    if (Input.GetKeyDown(KeyCode.S))
+    //    {
+    //        stepCount++;
+    //    }
+    //    if (Input.GetKeyDown(KeyCode.J))
+    //    {
+    //        jumps++;
+    //    }
+    //}
 
     private void SetExerciseText()
     {
@@ -132,8 +132,8 @@ public class ExerciseController : MonoBehaviour
             progress = count / (float)currentExercise.repetitions;
             progressBar.value = progress;
 
-            //count = jumpTracker.JumpsPerformed - initialCount;
-            count = jumps;
+            count = jumpTracker.JumpsPerformed - initialCount;
+            //count = jumps;
 
             yield return null;
         }
@@ -158,8 +158,8 @@ public class ExerciseController : MonoBehaviour
             progress = count / (float)currentExercise.repetitions;
             progressBar.value = progress;
 
-            //count = stepTracker.StepsTaken - initialCount;
-            count = stepCount;
+            count = stepTracker.StepsTaken - initialCount;
+            //count = stepCount;
 
             yield return null;
         }

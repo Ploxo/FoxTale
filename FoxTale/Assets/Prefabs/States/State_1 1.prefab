@@ -42,21 +42,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75ebe0f74813d0d41b01721cacd2acf6, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   stateId: 1
   graphics: {fileID: 21300000, guid: 6b74e30e73fed9747b13cb3cb2830aa8, type: 3}
   backgroundColor: {r: 0.3764706, g: 0.42352942, b: 0.21960784, a: 1}
   sentences:
   - speaker:
       speakerSprite: {fileID: 0}
-      speakerName:
+      speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "Today you start your journey to find the world the owl talked about. Your
-      first hurdle will be to move to the outer side of the forest that you are very
-      familiar with but do to the disaster could be difficult to move around in and
-      may be dangerous. You know that there is a lake present at the end of the forest
-      and you will have to move there first. \n\n*walk in the forest*"
+    text: 'Today you start your journey to find the world the owl talked about. '
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: 'Your first hurdle will be to move to the outer side of the forest that
+      you are very familiar with but due to the disaster could be difficult to move
+      around in and may be dangerous. '
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: "You know that there is a lake present at the end of the forest and you
+      will have to move there first. \n\n*walk in the forest*"
   options:
   - nextState: 2
     text: Move forward

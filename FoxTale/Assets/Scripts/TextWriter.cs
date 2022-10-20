@@ -28,7 +28,7 @@ public class TextWriter : MonoBehaviour
 
     int sentence = 0;
     TextMode currentTextMode;
-    bool Test;
+    bool finishWriting;
 
 
     public void StartWriter()
@@ -40,7 +40,7 @@ public class TextWriter : MonoBehaviour
     {
         currentTextMode = mode;
         layoutController.ClearItems();
-        Test = false;
+        finishWriting = false;
 
         if (coroutine != null)
             StopCoroutine(coroutine);
@@ -51,22 +51,16 @@ public class TextWriter : MonoBehaviour
 
     void SentenceEndCheck()
     {
-        if (currentTextMode == TextMode.SINGLE)
+        if (currentTextMode == TextMode.SINGLE && sentence <= textArrays.Length - 1)
         {
-            if (sentence <= textArrays.Length - 1)
-            {
-                //Assign the new text in the array to the text object in TextMeshPro and start typing the new sentence.
-                TextMeshProUGUI textObject = layoutController.GetFirstItem();
-                coroutine = StartCoroutine(TextVisible(textObject));
-            }
+            //Assign the new text in the array to the text object in TextMeshPro and start typing the new sentence.
+            TextMeshProUGUI textObject = layoutController.GetFirstItem();
+            coroutine = StartCoroutine(TextVisible(textObject));
         }
-        else if (currentTextMode == TextMode.CONTINUOUS)
+        else if (currentTextMode == TextMode.CONTINUOUS && sentence <= textArrays.Length - 1)
         {
-            if (sentence <= textArrays.Length - 1)
-            {
-                TextMeshProUGUI textObject = layoutController.GetItem(sentence);
-                coroutine = StartCoroutine(TextVisibleContinuous(textObject));
-            }
+            TextMeshProUGUI textObject = layoutController.GetItem(sentence);
+            coroutine = StartCoroutine(TextVisibleContinuous(textObject));
         }
     }
 
@@ -74,7 +68,16 @@ public class TextWriter : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Test = true;
+            if (!finishWriting)
+            {
+                finishWriting = true;
+            }
+            else if (currentTextMode == TextMode.SINGLE)
+            {
+                Debug.Log("entered else");
+                sentence++;
+                Invoke("SentenceEndCheck", 0.1f);
+            }
         }
     }
 
@@ -86,24 +89,29 @@ public class TextWriter : MonoBehaviour
         int totalVisibleCharacters = textObject.textInfo.characterCount;   //Characters displaying will be the written message.
         int counter = 0;    //Helps tracking the time.
 
-        Test = false;
+        finishWriting = false;
 
         while (true)
         {
-            int visibleCount = counter % (totalVisibleCharacters + 1);  //visibleCount gets incremented as time goes.
-            textObject.maxVisibleCharacters = visibleCount;
+            int visibleCount;
 
-            if (Test == true)
+            if (finishWriting == true)
             {
-                Test = false;
+                //finishWriting = false; // this delays the clicking
                 visibleCount = textObject.textInfo.characterCount;
             }
+            else
+            {
+                visibleCount = counter % (totalVisibleCharacters + 1);
+            }
+
+            textObject.maxVisibleCharacters = visibleCount;
 
             //Checks if the sentence is completed, if it is, feed the next sentence to the text writer.
             if (visibleCount >= totalVisibleCharacters)
             {
-                sentence++;
-                Invoke("SentenceEndCheck", timeForNextWords);
+                //sentence++;
+                //Invoke("SentenceEndCheck", timeForNextWords);
                 break;
             }
 
@@ -128,14 +136,19 @@ public class TextWriter : MonoBehaviour
 
         while (true)
         {
-            int visibleCount = counter % (totalVisibleCharacters + 1);
-            textObject.maxVisibleCharacters = visibleCount;
+            int visibleCount;
 
-            if (Test == true)
+            if (finishWriting == true)
             {
-                Test = false;
+                finishWriting = false;
                 visibleCount = textObject.textInfo.characterCount;
             }
+            else
+            {
+                visibleCount = counter % (totalVisibleCharacters + 1);
+            }
+
+            textObject.maxVisibleCharacters = visibleCount;
 
             //Checks if the sentence is completed, if it is, feed the next sentence to the text writer.
             if (visibleCount >= totalVisibleCharacters)

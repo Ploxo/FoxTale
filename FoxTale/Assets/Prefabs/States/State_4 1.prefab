@@ -52,15 +52,28 @@ MonoBehaviour:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "You lift the tree branch and help the squirrel before you continue walking. 
-      The squirrel moves along with you and thanks you for helping him. He also says
-      his name is \u201CNibbles'' and asks where you are going. You tell the squirrel
-      you are going to the new world where the grass is green and everything flourishes.
-      Nibbles light up \u201COh please take me with you on the journey there!\u201D
-      You agree that he could follow you, it would be nice to have some company along
-      your journey.  \r\n\r\nYou continue walking further into the forest at the
-      other side of the stream and walk about 500m while Nibbles talks about how
-      hungry he is before\u2026\r"
+    text: 'You lift the tree branch and help the squirrel before you continue walking.  '
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: "The squirrel moves along with you and thanks you for helping him. He also
+      says his name is \u201CNibbles'' and asks where you are going. You tell the
+      squirrel you are going to the new world where the grass is green and everything
+      flourishes. "
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: "Nibbles lights up \u201COh please take me with you on the journey there!\u201D"
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: "You agree that he could follow you, it would be nice to have some company
+      along your journey. You continue walking further into the forest at the other
+      side of the stream and walk about 500m while Nibbles talks about how hungry
+      he is before\u2026\r\n\r"
   options:
   - nextState: 5
     text: Move forward

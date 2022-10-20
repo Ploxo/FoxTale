@@ -53,11 +53,24 @@ MonoBehaviour:
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
     text: "\u201CAren\u2019t you a clever one\u201D, you hear spoken from the brush
-      to your left. You turn to face a squirrel, scrutinizing you.\r\n\u201CI was
-      sitting in that tree you just pushed,\u201D said the squirrel. \r\nYou notice
-      that it seems your tree-pushing has had some unintended consequences, trapping
-      the squirrel underneath it on this side.\r\n\u201CDo you mind helping me out
-      here, this is your doing after all!\u201D\r\n\r\nWhat do you do?\r"
+      to your left. You turn to face a squirrel, scrutinizing you.\r"
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: "\u201CI was sitting in that tree you just pushed,\u201D said the squirrel."
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: "You notice that it seems your tree-pushing has had some unintended consequences,
+      trapping the squirrel underneath it on this side.\r"
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: "\u201CDo you mind helping me out here, this is your doing after all!\u201D\r\n\nWhat
+      do you do?\r"
   options:
   - nextState: 4
     text: Help the squirrel

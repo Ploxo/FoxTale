@@ -52,9 +52,18 @@ MonoBehaviour:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "Success! You got the basket! \u201CGreat job!\u201D Nibbles exclaim, cheering
-      you on. You feast on the delicious blueberries before continuing into the forest,
-      leaving the clearing behind you."
+    text: 'Success! You got the basket! '
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: "\u201CGreat job!\u201D Nibbles exclaims, cheering you on."
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: ' You feast on the delicious blueberries before continuing into the forest,
+      leaving the clearing behind you.'
   options:
   - nextState: 10
     text: Move forward

@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game/Persistent.unity
     guid: 1a69c0f6395cd8a499789c2b44b103c1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SensorTestScene.unity
     guid: 24f1828d04a7cd64695717eb27693cd0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game/MainMenu.unity
     guid: 91d3c04eb2f898b4aa4f04f09a5a0bc4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game/Gameplay.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects:

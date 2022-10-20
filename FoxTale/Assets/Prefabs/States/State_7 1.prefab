@@ -54,11 +54,20 @@ MonoBehaviour:
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
     text: "You look at the squirrel and say \u201CI\u2019m in a hurry to find the
       new world where the grass is green and everything flourishes, and don\u2019t
-      have time to help you.\u201D You continue to walk forward.  \r\n\u201CHow rude!
-      You will regret this you stupid fox!\u201D the squirrel yells at you from behind.
-      But you have no time to stop and think about the squirrel, you have a long
-      journey in front of you!\r\n\r\nYou continue walking further into the forest
-      on the other side of the stream and walk about 500m before\u2026\r\n"
+      have time to help you.\u201D  You continue to walk forward.  \r"
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: "\u201CHow rude! You will regret this you stupid fox!\u201D the squirrel
+      yells at you from behind. But you have no time to stop and think about the
+      squirrel, you have a long journey in front of you!\r\n"
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: "You continue walking further into the forest on the other side of the
+      stream and walk about 500m before\u2026\r"
   options:
   - nextState: 8
     text: Move forward

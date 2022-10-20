@@ -52,14 +52,23 @@ MonoBehaviour:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "You walk until you enter a forest clearing and you now know that you are
+    text: 'You walk until you enter a forest clearing and you now know that you are
       more than halfway to the lake. The sun shines through the trees and you notice
-      how quiet it is here compared to the stream of water you just passed. You look
-      around the trees and catch the glimpse of something up on a short tree branch.
-      It looks like one of those baskets that humans use to steal berries in and
-      you smell the wonderful scent of blueberries. Your stomach makes a loud growling
-      sound, you realize that it has been a long time since you had something to
-      eat.  \r\nThose blueberries would be a really tasty snack. What do you do?\r"
+      how quiet it is here compared to the stream of water you just passed. '
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: "You look around the trees and catch the glimpse of something up on a short
+      tree branch. It looks like one of those baskets that humans use to steal berries
+      in. You smell the wonderful scent of blueberries. In response, your stomach
+      makes a loud growling sound, you realize that it has been a long time since
+      you had something to eat.  \r"
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: "Those blueberries would be a really tasty snack. What do you do?\r"
   options:
   - nextState: 6
     text: Jump 5 times to grab the basket

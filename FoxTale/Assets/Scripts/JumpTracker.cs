@@ -1,81 +1,35 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
 using TMPro;
 using UnityEngine;
 
 public class JumpTracker : MonoBehaviour
 {
     [SerializeField]
-    private SensorController sensorController;
-    //[SerializeField]
-    //private TextMeshProUGUI reportText;
+    private TextMeshProUGUI reportText;
 
-    int jumps = 0;
-    float timer = 0f;
+    [SerializeField]
     float expireTimer = 2f;
+    [SerializeField]
     float threshold = 0.75f;
-    float restThreashold = 0.5f;
-    int count = 0;
+    //[SerializeField]
+    //float restThreashold = 0.5f;
 
-    bool cancel = false;
+    private SensorController sensorController;
 
-    StringBuilder sb = new StringBuilder();
+    private int count = 0;
+    private int jumps = 0;
+    private float timer = 0f;
 
+    public int JumpsPerformed => jumps;
+
+
+    private void Start()
+    {
+        sensorController = SensorController.Instance;
+    }
 
     private void Update()
     {
         MeasureJump();
-    }
-
-    public void OnRecordPressed()
-    {
-        if (!cancel)
-            StartCoroutine(RecordJump());
-    }
-
-    public void OnStopRecordPressed()
-    {
-        cancel = true;
-    }
-
-    public void OnSaveRecordingPressed()
-    {
-        OutputWriter.WriteString("jump_output.txt", sb.ToString(), false);
-    }
-
-    private IEnumerator RecordJump()
-    {
-        bool cancel = false;
-        float startTime = Time.time;
-        while (!cancel)
-        {
-            Vector3 lacc = sensorController.CurrentLinearAcceleration();
-            Vector3 acc = sensorController.CurrentAcceleration();
-            Vector3 grav = sensorController.CurrentGravity();
-            float mag = (float)Math.Round(lacc.magnitude, 2);
-            float dot = (float)Math.Round(Vector3.Dot(lacc, sensorController.CurrentGravity()), 2);
-
-            float lx = (float)Math.Round(lacc.x, 2);
-            float ly = (float)Math.Round(lacc.y, 2);
-            float lz = (float)Math.Round(lacc.z, 2);
-
-            float x = (float)Math.Round(acc.x, 2);
-            float y = (float)Math.Round(acc.y, 2);
-            float z = (float)Math.Round(acc.z, 2);
-
-            float g = (float)Math.Round(grav.magnitude, 2);
-
-            sb.Append($"{Math.Round(Time.time - startTime, 2)}:{mag}:{dot}:{lx}:{ly}:{lz}:{x}:{y}:{z}:{g}\n");
-
-            yield return null;
-        }
-
-        cancel = false;
-        sb.Append("\n");
-
-        yield return null;
     }
 
     private void MeasureJump()
@@ -115,7 +69,9 @@ public class JumpTracker : MonoBehaviour
             count = 0;
             timer = 0f;
             jumps++;
-            //reportText.text = "" + jumps;
+
+            if (reportText != null)
+                reportText.text = "" + jumps;
         }
         else if (count > 0 && timer <= 0)
         {

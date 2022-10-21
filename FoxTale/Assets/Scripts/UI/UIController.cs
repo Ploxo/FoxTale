@@ -32,58 +32,93 @@ public class UIController : MonoBehaviour
     [Header("Exercise UI Elements")]
     [SerializeField]
     private GameObject exercisePanel;
-    [SerializeField]
-    private Slider progress;
-    [SerializeField]
-    private GameObject nextButton;
-    [SerializeField]
-    private GameObject cancelButton;
+    //[SerializeField]
+    //private Slider progress;
+    //[SerializeField]
+    //private GameObject nextButton;
+    //[SerializeField]
+    //private GameObject cancelButton;
 
 
     private void OnEnable()
     {
         // Register to GameController event for state updates
-        gameController.OnStateChanged += UpdateUI;
+        gameController.OnStateChanged += UpdateUIState;
         gameController.OnExerciseStart += OnExerciseStart;
         gameController.OnExerciseEnd += OnExerciseEnd;
+
+        // Register to TextWriter events to hide/unhide buttons 
+        textWriter.OnWriterComplete += OnWriterComplete;
     }
 
     private void OnDisable()
     {
         // Deregister to avoid memory leaks
-        gameController.OnStateChanged -= UpdateUI;
+        gameController.OnStateChanged -= UpdateUIState;
         gameController.OnExerciseStart -= OnExerciseStart;
         gameController.OnExerciseEnd -= OnExerciseEnd;
+
+        textWriter.OnWriterComplete -= OnWriterComplete;
     }
 
     public void OnExerciseStart(ExerciseInfo exercise)
     {
-        ActivateExerciseUI(true);
+        SetGameOrExercisePanel(false);
     }
 
     public void OnExerciseEnd(ExerciseInfo exercise)
     {
-        ActivateExerciseUI(false);
+        SetGameOrExercisePanel(true);
     }
 
-    private void ActivateExerciseUI(bool value)
+    public void OnWriterComplete()
     {
-        exercisePanel.SetActive(value);
-        gamePanel.SetActive(!value);
+        EnableOptionButtons(true);
+    }
+
+    /// <summary>
+    /// Set the options for the player as active or not, using Button.interactable.
+    /// </summary>
+    /// <param name="value">The value to set for the buttons.</param>
+    private void EnableOptionButtons(bool value)
+    {
+        EnableButton(advanceButton, value);
+        EnableButton(optionAButton, value);
+        EnableButton(optionBButton, value);
+    }
+
+    private void EnableButton(Button button, bool value)
+    {
+        //if (button.gameObject.activeInHierarchy)
+        //{
+            button.interactable = value;
+        //}
+    }
+
+    /// <summary>
+    /// Toggle between visible game panel or exercise panel.
+    /// </summary>
+    /// <param name="value">True for game panel and no exercise panel.</param>
+    private void SetGameOrExercisePanel(bool value)
+    {
+        gamePanel.SetActive(value);
+        exercisePanel.SetActive(!value);
     }
 
     /// <summary>
     /// Update the UI with the new state data.
     /// </summary>
     /// <param name="currentState">The state containing the data to update with.</param>
-    public void UpdateUI(State currentState)
+    public void UpdateUIState(State currentState)
     {
-        gamePanel.SetActive(true);
-        exercisePanel.SetActive(false);
+        SetGameOrExercisePanel(true);
+        EnableOptionButtons(false);
+        
 
         uiBackground.color = currentState.backgroundColor;
         sceneBackground.sprite = currentState.graphics;
         textWriter.textArrays = currentState.sentences;
+
         textWriter.StartWriter();
 
         // Single option enables forward button and disables option buttons and vice versa.

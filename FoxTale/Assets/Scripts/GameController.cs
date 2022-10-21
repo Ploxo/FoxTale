@@ -36,7 +36,12 @@ public class GameController : MonoBehaviour
         currentState = states[startIndex];
         Debug.Log("Current state is: " + currentState.stateId);
 
-        // Handle state change
+        StartCoroutine(WaitForOneFrame());
+    }
+
+    private IEnumerator WaitForOneFrame()
+    {
+        yield return new WaitForEndOfFrame();
         OnStateChanged(currentState);
     }
 

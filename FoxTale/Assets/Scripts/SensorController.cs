@@ -20,18 +20,18 @@ public class SensorController : MonoBehaviour
 
     private Accelerometer accelerometer;
     private StepCounter stepCounter;
-
     private LinearAccelerationSensor linearSensor;
-    //[SerializeField]
-    //private TextMeshProUGUI linearText;
     private GravitySensor gravitySensor;
-    //[SerializeField]
-    //private TextMeshProUGUI gravityText;
 
+    // For debugging
     //[SerializeField]
     //private TextMeshProUGUI accelerometerText;
     //[SerializeField]
     //private TextMeshProUGUI counterText;
+    //[SerializeField]
+    //private TextMeshProUGUI linearText;
+    //[SerializeField]
+    //private TextMeshProUGUI gravityText;
 
     private float accelerometerUpdateInterval = 1 / 60f;
     private float lowPassKernelWidthInSeconds = 1f;

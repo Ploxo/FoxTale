@@ -5,6 +5,10 @@ using TMPro;
 
 public class TextWriter : MonoBehaviour
 {
+    public delegate void WriterDelegate();
+    public event WriterDelegate OnWriterStart;
+    public event WriterDelegate OnWriterComplete;
+
     public enum TextMode
     {
         SINGLE,
@@ -12,15 +16,12 @@ public class TextWriter : MonoBehaviour
     }
 
     public TextMode defaultTextMode;
-
-    [SerializeField]
-    LayoutController layoutController;
-
     public Sentence[] textArrays;
 
     [SerializeField]
+    LayoutController layoutController;
+    [SerializeField]
     float timeBetweenCharacters;
-
     [SerializeField]
     float timeForNextWords;
 
@@ -51,33 +52,49 @@ public class TextWriter : MonoBehaviour
 
     void SentenceEndCheck()
     {
-        if (currentTextMode == TextMode.SINGLE && sentence <= textArrays.Length - 1)
+        if (currentTextMode == TextMode.SINGLE)
         {
-            //Assign the new text in the array to the text object in TextMeshPro and start typing the new sentence.
-            TextMeshProUGUI textObject = layoutController.GetFirstItem();
-            coroutine = StartCoroutine(TextVisible(textObject));
+            if (sentence <= textArrays.Length - 1)
+            {
+                //Assign the new text in the array to the text object in TextMeshPro and start typing the new sentence.
+                TextMeshProUGUI textObject = layoutController.GetFirstItem();
+                coroutine = StartCoroutine(TextVisible(textObject));
+            }
+            else
+            {
+                OnWriterComplete();
+            }
         }
-        else if (currentTextMode == TextMode.CONTINUOUS && sentence <= textArrays.Length - 1)
+        else if (currentTextMode == TextMode.CONTINUOUS)
         {
-            TextMeshProUGUI textObject = layoutController.GetItem(sentence);
-            coroutine = StartCoroutine(TextVisibleContinuous(textObject));
+            if (sentence <= textArrays.Length - 1)
+            {
+                TextMeshProUGUI textObject = layoutController.GetItem(sentence);
+                coroutine = StartCoroutine(TextVisibleContinuous(textObject));
+            }
+            else
+            {
+                OnWriterComplete();
+            }
         }
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        //AdvanceText();
+    }
+
+    public void AdvanceText()
+    {
+        if (!finishWriting)
         {
-            if (!finishWriting)
-            {
-                finishWriting = true;
-            }
-            else if (currentTextMode == TextMode.SINGLE)
-            {
-                Debug.Log("entered else");
-                sentence++;
-                Invoke("SentenceEndCheck", 0.1f);
-            }
+            finishWriting = true;
+        }
+        else if (currentTextMode == TextMode.SINGLE)
+        {
+            Debug.Log("entered else");
+            sentence++;
+            Invoke("SentenceEndCheck", 0.1f);
         }
     }
 
@@ -126,9 +143,8 @@ public class TextWriter : MonoBehaviour
     /// <returns></returns>
     private IEnumerator TextVisibleContinuous(TextMeshProUGUI textObject)
     {
-        Debug.Log(sentence);
         textObject.text = textArrays[sentence].text;
-        Debug.Log(textArrays[sentence].text);
+        Debug.Log($"Sentence {sentence}, text: {textArrays[sentence].text}");
         textObject.ForceMeshUpdate();
 
         int totalVisibleCharacters = textObject.textInfo.characterCount;

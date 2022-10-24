@@ -10,12 +10,6 @@ public class DialogueReader : MonoBehaviour
     public Sentence[] textArrays;
 
 
-    void Start()
-    {
-        //speaker = TTS.GetDefaultSpeaker();
-        //TTS.Init();     //Initializes the TTS system.
-    }
-
     public void StartReader()
     {
         StopAllCoroutines();
@@ -32,9 +26,10 @@ public class DialogueReader : MonoBehaviour
 
     private IEnumerator ReadTextCoroutine()
     {
-        Debug.Log("Ran dialoguereader coroutine");
-        if (speaker == null)
-            Debug.Log($"Speaker is null");
+        //Debug.Log("Ran dialoguereader coroutine");
+        //if (speaker == null)
+            //Debug.Log($"Speaker is null");
+
         int sentence = 0;
         while (sentence < textArrays.Length)
         {

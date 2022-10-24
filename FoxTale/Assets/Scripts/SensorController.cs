@@ -86,7 +86,7 @@ public class SensorController : MonoBehaviour
         if (permissionName == "ACTIVITY_RECOGNITION")
         {
             InputSystem.EnableDevice(StepCounter.current);
-            Debug.Log("StepCounter permission granted and enabled.");
+            //Debug.Log("StepCounter permission granted and enabled.");
         }
     }
 
@@ -94,7 +94,7 @@ public class SensorController : MonoBehaviour
     {
         if (permissionName == "ACTIVITY_RECOGNITION")
         {
-            Debug.Log("StepCounter permission denied.");
+            //Debug.Log("StepCounter permission denied.");
         }
     }
     #endregion
@@ -107,11 +107,11 @@ public class SensorController : MonoBehaviour
         {
             InputSystem.EnableDevice(Accelerometer.current);
             Accelerometer.current.samplingFrequency = accelerometerUpdateInterval;
-            Debug.Log("Accelerometer is enabled");
+            //Debug.Log("Accelerometer is enabled");
         }
         else
         {
-            Debug.Log("Accelerometer is null");
+            //Debug.Log("Accelerometer is null");
         }
     }
 
@@ -121,7 +121,7 @@ public class SensorController : MonoBehaviour
         if (stepCounter != null)
         {
             InputSystem.EnableDevice(StepCounter.current);
-            Debug.Log("StepCounter enabled.");
+            //Debug.Log("StepCounter enabled.");
 
             // This might not be required if phone has preset permissions for the app
             //if (!Permission.HasUserAuthorizedPermission("ACTIVITY_RECOGNITION"))
@@ -139,7 +139,7 @@ public class SensorController : MonoBehaviour
         }
         else
         {
-            Debug.Log("StepCounter is null");
+            //Debug.Log("StepCounter is null");
         }
     }
 
@@ -149,11 +149,11 @@ public class SensorController : MonoBehaviour
         if (linearSensor != null)
         {
             InputSystem.EnableDevice(LinearAccelerationSensor.current);
-            Debug.Log("LinearAccelerationSensor is enabled");
+            //Debug.Log("LinearAccelerationSensor is enabled");
         }
         else
         {
-            Debug.Log("LinearAccelerationSensor is null");
+            //Debug.Log("LinearAccelerationSensor is null");
         }
     }
 
@@ -163,11 +163,11 @@ public class SensorController : MonoBehaviour
         if (gravitySensor != null)
         {
             InputSystem.EnableDevice(GravitySensor.current);
-            Debug.Log("GravitySensor is enabled");
+            //Debug.Log("GravitySensor is enabled");
         }
         else
         {
-            Debug.Log("GravitySensor is null");
+            //Debug.Log("GravitySensor is null");
         }
     }
     #endregion

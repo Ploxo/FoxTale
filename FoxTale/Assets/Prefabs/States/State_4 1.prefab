@@ -52,7 +52,7 @@ MonoBehaviour:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: 'You manage to life the tree branch and help the squirrel before you continue
+    text: 'You manage to lift the tree branch and help the squirrel before you continue
       walking.  '
   - speaker:
       speakerSprite: {fileID: 0}

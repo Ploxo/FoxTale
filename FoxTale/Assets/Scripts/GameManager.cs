@@ -17,9 +17,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private CanvasGroup fadeCanvasGroup;
     [SerializeField]
-    private ProgressBar progressBar;
+    private GameProgressBar progressBar;
 
-    private List<AsyncOperation> scenesLoading = new List<AsyncOperation>();
+    private AsyncOperation sceneLoading;
     private bool isFading = false;
 
 
@@ -45,37 +45,15 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(LoadTTS());
-        //SoundManager.instance.PlayTrack("track01");
-    }
-
-    private IEnumerator LoadTTS()
-    {
-        //TTS.Init();
-
-        while (true)
-        {
-            List<TTSEngine> engines = TTS.GetInstalledEngines();
-            if (engines == null || engines.Count == 0)
-            {
-                Debug.Log("Was null or 0");
-            }
-            else
-            {
-
-                Debug.Log($"Was not null or 0 {engines}");
-                break;
-            }
-            yield return null;
-        }
-        yield return null;
+        TTS.Init();
     }
 
     // Start game
     public void LoadGame()
     {
-        scenesLoading.Add(SceneManager.LoadSceneAsync((int)SceneName.GAMEPLAY, LoadSceneMode.Additive));
-        StartCoroutine(GetLoadingProgress());
+        //scenesLoading.Add(SceneManager.LoadSceneAsync((int)SceneName.GAMEPLAY, LoadSceneMode.Additive));
+        sceneLoading = SceneManager.LoadSceneAsync((int)SceneName.GAMEPLAY, LoadSceneMode.Additive);
+        //StartCoroutine(GetLoadingProgress());
     }
 
     // Quit game
@@ -110,7 +88,7 @@ public class GameManager : MonoBehaviour
             OnPreSceneUnload();
 
         // Unload current scene over multiple frames
-        Debug.Log($"unloading scene with build index: {oldSceneIndex}");
+        //Debug.Log($"unloading scene with build index: {oldSceneIndex}");
         yield return SceneManager.UnloadSceneAsync(oldSceneIndex);
 
         // Load next scene over multiple frames
@@ -141,7 +119,7 @@ public class GameManager : MonoBehaviour
             yield return SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Single);
         }
 
-        Debug.Log($"loaded scene: {sceneIndex}");
+        //Debug.Log($"loaded scene: {sceneIndex}");
         SceneManager.SetActiveScene(SceneManager.GetSceneAt(SceneManager.sceneCount - 1));
     }
 
@@ -169,27 +147,42 @@ public class GameManager : MonoBehaviour
         isFading = false;
     }
 
-    // Track loading progress for one or more scenes being loaded
-    public IEnumerator GetLoadingProgress()
-    {
-        for (int i = 0; i < scenesLoading.Count; i++)
-        {
-            while (!scenesLoading[i].isDone)
-            {
-                float loadingProgress = 0;
-                foreach (AsyncOperation op in scenesLoading)
-                {
-                    loadingProgress += op.progress;
-                }
+    //// Track loading progress for one or more scenes being loaded
+    //public IEnumerator GetLoadingProgress()
+    //{
+    //    //for (int i = 0; i < scenesLoading.Count; i++)
+    //    //{
+    //    //    while (!scenesLoading[i].isDone)
+    //    //    {
+    //    //        float loadingProgress = 0;
+    //    //        foreach (AsyncOperation op in scenesLoading)
+    //    //        {
+    //    //            loadingProgress += op.progress;
+    //    //        }
 
-                loadingProgress = (loadingProgress / scenesLoading.Count) * 100f;
-                progressBar.current = Mathf.RoundToInt(loadingProgress);
+    //    //        loadingProgress = (loadingProgress / scenesLoading.Count) * 100f;
+    //    //        progressBar.current = Mathf.RoundToInt(loadingProgress);
 
-                yield return new WaitForSeconds(0.5f);
-                Debug.Log($"Progress is: {loadingProgress}");
+    //    //        yield return new WaitForSeconds(0.5f);
+    //    //        Debug.Log($"Progress is: {loadingProgress}");
 
-                yield return null;
-            }
-        }
-    }
+    //    //        yield return null;
+    //    //    }
+    //    //}
+
+    //    float progress = 0f;
+    //    while (!sceneLoading.isDone)
+    //    {
+    //        progress += sceneLoading.progress;
+    //        Debug.Log($"Scene progress: {progress}");
+
+    //        progressBar.SetValue(progress);
+
+    //        yield return new WaitForSeconds(0.5f);
+
+    //        yield return null;
+    //    }
+
+    //    sceneLoading = null;
+    //}
 }

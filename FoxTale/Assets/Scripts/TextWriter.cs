@@ -6,7 +6,7 @@ using TMPro;
 public class TextWriter : MonoBehaviour
 {
     public delegate void WriterDelegate();
-    public event WriterDelegate OnWriterStart;
+    //public event WriterDelegate OnWriterStart;
     public event WriterDelegate OnWriterComplete;
 
     public enum TextMode

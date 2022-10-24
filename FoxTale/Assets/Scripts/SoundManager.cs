@@ -31,13 +31,11 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySound(string name)
     {
-        //source.clip = database.GetAudioClip(name);
 
-        audioSources[0].PlayOneShot(audioDict[name]);
     }
 
     public void PlayTrack(string name)
     {
-        audioSources[1].PlayOneShot(audioDict[name]);
+        //audioSources[1].PlayOneShot(audioDict[name]);
     }
 }

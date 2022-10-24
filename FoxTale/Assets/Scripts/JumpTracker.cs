@@ -9,7 +9,7 @@ public class JumpTracker : MonoBehaviour
     [SerializeField]
     float expireTimer = 2f;
     [SerializeField]
-    float threshold = 0.75f;
+    float threshold = 3f;
     //[SerializeField]
     //float restThreashold = 0.5f;
 

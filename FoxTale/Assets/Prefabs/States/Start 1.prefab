@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateId: 0
-  graphics: {fileID: 21300000, guid: 516474052d8fad64eba89406c177541b, type: 3}
+  graphics: {fileID: 21300000, guid: e64921ee0d24bdc48b8ba6f0109f8da4, type: 3}
   backgroundColor: {r: 0.7372549, g: 0.42352942, b: 0.14509805, a: 1}
   sentences:
   - speaker:

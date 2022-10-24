@@ -20,6 +20,10 @@ public class UIController : MonoBehaviour
     private Image uiBackground;
     [SerializeField]
     private Image sceneBackground;
+    [SerializeField]
+    private Image muteImage;
+    [SerializeField]
+    private Sprite[] muteImages;
 
     [Header("Game UI Elements")]
     [SerializeField]
@@ -65,6 +69,16 @@ public class UIController : MonoBehaviour
         exerciseController.OnExerciseEnd -= OnExerciseEnd;
 
         textWriter.OnWriterComplete -= OnWriterComplete;
+    }
+
+    public void OnMuteButtonPressed()
+    {
+        if (muteImage.sprite == muteImages[0])
+            muteImage.sprite = muteImages[1];
+        else
+            muteImage.sprite = muteImages[0];
+
+
     }
 
     public void OnExerciseStart(ExerciseInfo exercise)

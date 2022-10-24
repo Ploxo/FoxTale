@@ -6,9 +6,13 @@ public class UIController : MonoBehaviour
 {
     [SerializeField]
     private GameController gameController;
+    [SerializeField]
+    private ExerciseController exerciseController;
     // Used for outputting typewriter text
     [SerializeField]
     private TextWriter textWriter;
+    [SerializeField]
+    private DialogueReader dialogueReader;
 
     // UI elements
     [Header("UI elements")]
@@ -44,8 +48,9 @@ public class UIController : MonoBehaviour
     {
         // Register to GameController event for state updates
         gameController.OnStateChanged += UpdateUIState;
-        gameController.OnExerciseStart += OnExerciseStart;
-        gameController.OnExerciseEnd += OnExerciseEnd;
+
+        exerciseController.OnExerciseStart += OnExerciseStart;
+        exerciseController.OnExerciseEnd += OnExerciseEnd;
 
         // Register to TextWriter events to hide/unhide buttons 
         textWriter.OnWriterComplete += OnWriterComplete;
@@ -55,8 +60,9 @@ public class UIController : MonoBehaviour
     {
         // Deregister to avoid memory leaks
         gameController.OnStateChanged -= UpdateUIState;
-        gameController.OnExerciseStart -= OnExerciseStart;
-        gameController.OnExerciseEnd -= OnExerciseEnd;
+
+        exerciseController.OnExerciseStart -= OnExerciseStart;
+        exerciseController.OnExerciseEnd -= OnExerciseEnd;
 
         textWriter.OnWriterComplete -= OnWriterComplete;
     }
@@ -64,6 +70,7 @@ public class UIController : MonoBehaviour
     public void OnExerciseStart(ExerciseInfo exercise)
     {
         SetGameOrExercisePanel(false);
+        dialogueReader.StopReader();
     }
 
     public void OnExerciseEnd(ExerciseInfo exercise)
@@ -114,12 +121,14 @@ public class UIController : MonoBehaviour
         SetGameOrExercisePanel(true);
         EnableOptionButtons(false);
         
-
         uiBackground.color = currentState.backgroundColor;
         sceneBackground.sprite = currentState.graphics;
-        textWriter.textArrays = currentState.sentences;
 
+        textWriter.textArrays = currentState.sentences;
         textWriter.StartWriter();
+
+        dialogueReader.textArrays = currentState.sentences;
+        dialogueReader.StartReader();
 
         // Single option enables forward button and disables option buttons and vice versa.
         if (currentState.options.Length > 1)

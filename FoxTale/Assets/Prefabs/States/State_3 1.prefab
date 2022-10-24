@@ -75,6 +75,6 @@ MonoBehaviour:
   - nextState: 4
     text: Help the squirrel
     exercise: {fileID: 6598043867695528868, guid: 98ad3b2c75acabb498dc75d51644681e, type: 3}
-  - nextState: 6
+  - nextState: 7
     text: Ignore the squirrel
     exercise: {fileID: 4254150079229159608, guid: b8479b08e0ce1354f94081d8bbea55b2, type: 3}

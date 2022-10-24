@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "895X05Q3D",
+    "m_SelectedDeviceId": "33009ecb2947c3f3",
     "m_SelectedPackage": {
-        "deviceId": "895X05Q3D",
+        "deviceId": "33009ecb2947c3f3",
         "name": "com.DefaultCompany.FoxTale",
-        "processId": 25339,
+        "processId": 18062,
         "exited": false
     },
     "m_SelectedPriority": 1,
@@ -11,217 +11,37 @@
         {
             "deviceId": "FA632WM01069",
             "name": "com.htc.launcher",
-            "processId": 1827,
+            "processId": 1833,
             "exited": false
         },
         {
             "deviceId": "FA632WM01069",
             "name": "com.DefaultCompany.FoxTale",
-            "processId": 20822,
+            "processId": 19493,
             "exited": true
         },
         {
             "deviceId": "FA632WM01069",
             "name": "com.DefaultCompany.FoxTale",
-            "processId": 22059,
+            "processId": 22148,
             "exited": true
         },
         {
             "deviceId": "FA632WM01069",
             "name": "com.DefaultCompany.FoxTale",
-            "processId": 23472,
+            "processId": 24979,
             "exited": true
         },
         {
             "deviceId": "FA632WM01069",
             "name": "com.DefaultCompany.FoxTale",
-            "processId": 26399,
+            "processId": 27438,
             "exited": true
         },
         {
             "deviceId": "FA632WM01069",
             "name": "com.DefaultCompany.FoxTale",
-            "processId": 28040,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 29874,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 32044,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 1377,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 3141,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 4259,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 6504,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 8085,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 11684,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 18704,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 22024,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 24054,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 31084,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 876,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 3133,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 7356,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 9903,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 14034,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 15724,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 18739,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 27854,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 1024,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 3272,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 6346,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 8631,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 10911,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 13376,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 16769,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 18791,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 22132,
-            "exited": false
-        },
-        {
-            "deviceId": "FA632WM01069",
-            "name": "com.DefaultCompany.FoxTale",
-            "processId": 25566,
+            "processId": 31463,
             "exited": false
         },
         {
@@ -366,6 +186,48 @@
             "deviceId": "895X05Q3D",
             "name": "com.DefaultCompany.FoxTale",
             "processId": 25339,
+            "exited": false
+        },
+        {
+            "deviceId": "33009ecb2947c3f3",
+            "name": "com.samsung.android.lool",
+            "processId": 26871,
+            "exited": false
+        },
+        {
+            "deviceId": "33009ecb2947c3f3",
+            "name": "com.DefaultCompany.FoxTale",
+            "processId": 918,
+            "exited": true
+        },
+        {
+            "deviceId": "33009ecb2947c3f3",
+            "name": "com.DefaultCompany.FoxTale",
+            "processId": 4897,
+            "exited": true
+        },
+        {
+            "deviceId": "33009ecb2947c3f3",
+            "name": "com.DefaultCompany.FoxTale",
+            "processId": 8933,
+            "exited": true
+        },
+        {
+            "deviceId": "33009ecb2947c3f3",
+            "name": "com.DefaultCompany.FoxTale",
+            "processId": 13437,
+            "exited": true
+        },
+        {
+            "deviceId": "33009ecb2947c3f3",
+            "name": "com.android.settings",
+            "processId": 26760,
+            "exited": false
+        },
+        {
+            "deviceId": "33009ecb2947c3f3",
+            "name": "com.DefaultCompany.FoxTale",
+            "processId": 18062,
             "exited": false
         }
     ],

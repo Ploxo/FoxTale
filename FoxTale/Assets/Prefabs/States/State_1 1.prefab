@@ -52,8 +52,12 @@ MonoBehaviour:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: You will first have to get out of the area affected by the disaster, who
-      knows what challenges you may encounter on your way?
+    text: 'You will first have to get out of the area affected by the disaster. '
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: Who knows what challenges you may encounter on your way?
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 

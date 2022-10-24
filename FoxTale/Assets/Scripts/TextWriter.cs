@@ -18,18 +18,20 @@ public class TextWriter : MonoBehaviour
     public TextMode defaultTextMode;
     public Sentence[] textArrays;
 
+    //[SerializeField]
+    //private DialogueReader dialogueReader;
     [SerializeField]
-    LayoutController layoutController;
+    private LayoutController layoutController;
     [SerializeField]
-    float timeBetweenCharacters;
+    private float timeBetweenCharacters;
     [SerializeField]
-    float timeForNextWords;
+    private float timeForNextWords;
 
-    Coroutine coroutine;
+    private Coroutine coroutine;
 
-    int sentence = 0;
-    TextMode currentTextMode;
-    bool finishWriting;
+    private int sentence = 0;
+    private TextMode currentTextMode;
+    private bool finishWriting;
 
 
     public void StartWriter()
@@ -79,11 +81,6 @@ public class TextWriter : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        //AdvanceText();
-    }
-
     public void AdvanceText()
     {
         if (!finishWriting)
@@ -101,6 +98,7 @@ public class TextWriter : MonoBehaviour
     public IEnumerator TextVisible(TextMeshProUGUI textObject)
     {
         textObject.text = textArrays[sentence].text;
+        //dialogueReader.ReadText(textArrays[sentence].text);
         textObject.ForceMeshUpdate();  //Will force a regeneration of text for the text object? (This is neccessary according to the tutorial).
 
         int totalVisibleCharacters = textObject.textInfo.characterCount;   //Characters displaying will be the written message.
@@ -144,7 +142,8 @@ public class TextWriter : MonoBehaviour
     private IEnumerator TextVisibleContinuous(TextMeshProUGUI textObject)
     {
         textObject.text = textArrays[sentence].text;
-        Debug.Log($"Sentence {sentence}, text: {textArrays[sentence].text}");
+        //Debug.Log($"Sentence {sentence}, text: {textArrays[sentence].text}");
+        //dialogueReader.ReadText(textArrays[sentence].text);
         textObject.ForceMeshUpdate();
 
         int totalVisibleCharacters = textObject.textInfo.characterCount;

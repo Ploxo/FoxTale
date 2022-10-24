@@ -1,3 +1,4 @@
+using ReadSpeaker;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -44,7 +45,30 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(LoadTTS());
         //SoundManager.instance.PlayTrack("track01");
+    }
+
+    private IEnumerator LoadTTS()
+    {
+        //TTS.Init();
+
+        while (true)
+        {
+            List<TTSEngine> engines = TTS.GetInstalledEngines();
+            if (engines == null || engines.Count == 0)
+            {
+                Debug.Log("Was null or 0");
+            }
+            else
+            {
+
+                Debug.Log($"Was not null or 0 {engines}");
+                break;
+            }
+            yield return null;
+        }
+        yield return null;
     }
 
     // Start game
@@ -86,7 +110,7 @@ public class GameManager : MonoBehaviour
             OnPreSceneUnload();
 
         // Unload current scene over multiple frames
-        Debug.Log($"unloading scene with build index: {SceneManager.GetActiveScene().buildIndex}");
+        Debug.Log($"unloading scene with build index: {oldSceneIndex}");
         yield return SceneManager.UnloadSceneAsync(oldSceneIndex);
 
         // Load next scene over multiple frames

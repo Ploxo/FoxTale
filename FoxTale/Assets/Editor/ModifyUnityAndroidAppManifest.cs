@@ -1,7 +1,9 @@
+using System;
 using System.IO;
 using System.Text;
 using System.Xml;
 using UnityEditor.Android;
+using UnityEngine;
 
 public class ModifyUnityAndroidAppManifest : IPostGenerateGradleAndroidProject
 {
@@ -13,9 +15,13 @@ public class ModifyUnityAndroidAppManifest : IPostGenerateGradleAndroidProject
 
         var androidManifest = new AndroidManifest(GetManifestPath(basePath));
 
+        Debug.Log(basePath);
+
         //androidManifest.SetMicrophonePermission();
         androidManifest.SetActivityRecognitionPermission();
         androidManifest.SetStepCounterFeature();
+        androidManifest.SetReadExternalStoragePermission();
+        androidManifest.SetWriteExternalStoragePermission();
 
         // Add your XML manipulation routines
 
@@ -128,6 +134,24 @@ internal class AndroidManifest : AndroidXmlDocument
         XmlElement child = CreateElement("uses-permission");
         manifest.AppendChild(child);
         XmlAttribute newAttribute = CreateAndroidAttribute("name", "android.permission.ACTIVITY_RECOGNITION");
+        child.Attributes.Append(newAttribute);
+    }
+
+    internal void SetWriteExternalStoragePermission()
+    {
+        var manifest = SelectSingleNode("/manifest");
+        XmlElement child = CreateElement("uses-permission");
+        manifest.AppendChild(child);
+        XmlAttribute newAttribute = CreateAndroidAttribute("name", "android.permission.WRITE_EXTERNAL_STORAGE");
+        child.Attributes.Append(newAttribute);
+    }
+
+    internal void SetReadExternalStoragePermission()
+    {
+        var manifest = SelectSingleNode("/manifest");
+        XmlElement child = CreateElement("uses-permission");
+        manifest.AppendChild(child);
+        XmlAttribute newAttribute = CreateAndroidAttribute("name", "android.permission.READ_EXTERNAL_STORAGE");
         child.Attributes.Append(newAttribute);
     }
 

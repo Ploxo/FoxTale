@@ -208,7 +208,7 @@ public class SensorController : MonoBehaviour
 
         return deltaAcceleration;
 
-        return linearSensor.acceleration.ReadValue();
+        //return linearSensor.acceleration.ReadValue();
     }
 
     public Vector3 CurrentGravity()

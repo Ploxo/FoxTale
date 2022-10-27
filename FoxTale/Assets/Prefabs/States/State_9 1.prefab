@@ -65,13 +65,6 @@ MonoBehaviour:
       speakerSprite: {fileID: 0}
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
-    text: "\u201CThere you go! How dare you leave me behind like that!\u201D\r\n\nIt\u2019s
-      the squirrel. He looks really annoyed. Suddenly you feel a bit guilty for leaving
-      him behind.\n\r\n"
-  - speaker:
-      speakerSprite: {fileID: 0}
-      speakerName: 
-      speakerColor: {r: 0, g: 0, b: 0, a: 0}
     text: "\u201CI\u2019m sorry for not helping you earlier. I just have a long journey
       ahead of me,\u201D you say with remorse in your voice. \r"
   - speaker:
@@ -79,9 +72,13 @@ MonoBehaviour:
       speakerName: 
       speakerColor: {r: 0, g: 0, b: 0, a: 0}
     text: "\u201CYou are lucky I am so forgiving. Let me come with you to this green
-      place you talked about and I will let it slide\u201D the squirrel says.\r\n\n\u201CDeal\u201D,
-      you answer.\r\n\n\u201CThe name is Nibbles by the way\u201D, says the squirrel.\r\n\n\u201CNice
-      to meet you Nibbles\""
+      place you talked about and I will let it slide\u201D the squirrel says.\r"
+  - speaker:
+      speakerSprite: {fileID: 0}
+      speakerName: 
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+    text: "\u201CDeal\u201D, you answer.\r\n\u201CThe name is Nibbles by the way\u201D,
+      says the squirrel.\r\n\u201CNice to meet you Nibbles\""
   - speaker:
       speakerSprite: {fileID: 0}
       speakerName: 

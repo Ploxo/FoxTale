@@ -13,7 +13,7 @@ public class LayoutController : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 7; i++)
         {
             items.Add(Instantiate(dialogueTextPrefab, gameObject.transform));
         }

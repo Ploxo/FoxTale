@@ -8,7 +8,9 @@ A mobile game that is played through physical activity.
 
 ## About
 
-This mobile game was developed during the game development course (Game Development DIT460 during master's). The mobile game was developed in collaboration with 'Generation Pep' (an organization that focuses on making children physically exercise more). The game targets kids aged 11 and up, the game incorporates visual novel elements and physical movement, tasks that have to be completed through physical movement which can vary from walking a short distance to jumping, etc.
+This mobile game was developed during the game development course (Game Development DIT460 during master's). The mobile game was developed in collaboration with 'Generation Pep' (an organization that focuses on making children physically exercise more) and is aimed at kids aged 11 and up. **The game was developed in Unity and coded in C# (.NET).**
+
+The game incorporates visual novel elements and physical movement, tasks that have to be completed through physical movement which can vary from walking a short distance to jumping, etc.
 
 ## My contribution
 
